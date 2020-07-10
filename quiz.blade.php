@@ -37,15 +37,14 @@
     <a href="javascript:void(0)" x-show="quiz.step > 1" x-on:click="window.livewire.emit('backStep')" class="Quiz--back"><i class="far fa-angle-left"></i> Back</a>
 </main>
 
-<footer class="text-center flex flex-col space-y-4 mt-10">
-    <img src="img/logo-light.png" class="mx-auto h-8 md:h-12" />
+<footer class="text-center flex flex-col space-y-4 mt-10 py-4">
+    <img src="{{ $site['branding']['logo'] ?? null }}" class="mx-auto h-8 md:h-12" />
     <address class="flex flex-col text-white text-xs">
-        <span>3000 East main Street, suite 156<br />Columbus, OH 43209</span>
-        <a href="mailto:#" class="text-blue-400">info@compensationadvocate.com</a>
-        <a href="tel:#">+1 (888) 405-6035</a>
+        <span>{{ $site['branding']['address'] ?? null }}</span>
+        <a href="mailto:#" class="text-blue-400">{{ $site['branding']['email'] ?? null }}</a>
+        <a href="tel:#">{{ $site['branding']['phone'] ?? null }}</a>
     </address>
-
-    <small class="leading-none text-gray-400">© 2020 Copyright Compensation Advocate</small>
+    <small class="leading-none text-gray-400">© 2020 Copyright {{ $site["name"] }}</small>
 </footer>
 
 <x-alert />
