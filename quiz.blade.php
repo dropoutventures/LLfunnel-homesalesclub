@@ -38,7 +38,7 @@
 </main>
 
 <footer class="text-center flex flex-col space-y-4 mt-10 py-4">
-    <img src="{{ $site['branding']['logo'] ?? null }}" class="mx-auto h-8 md:h-12" />
+    <img src="{{ $site['branding']['logo'] ?? null }}" class="mx-auto h-6 md:h-8" />
     <address class="flex flex-col text-white text-xs">
         <span>{{ $site['branding']['address'] ?? null }}</span>
         <a href="mailto:#" class="text-blue-400">{{ $site['branding']['email'] ?? null }}</a>
