@@ -6,6 +6,18 @@ body {
 }
 body.loading::before {}
 
+[data-ripple] ~ .ripple-container .ripple {
+    background-color: var(--brand1);
+    opacity: 0.4;
+}
+[data-ripple="dark"] ~ .ripple-container .ripple {
+    background-color: rgba(0,0,0,0.1);
+}
+[data-ripple="currentColor"] ~ .ripple-container .ripple {
+    background-color: currentColor;
+    opacity: 0.4;
+}
+
 h1,h2,h3,h4,h5,h6 {}
 h1 {}
 h2 {}
