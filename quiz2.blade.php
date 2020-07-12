@@ -10,19 +10,23 @@
       x-on:next-step.document="quiz = window.livewire.find(document.getElementById('Quiz').getAttribute('wire:id')).data"
 >
 
-<header class="bg-white shadow py-2 sm:pb-0">
+<header class="bg-white shadow py-2 md:pb-0">
     <div class="container max-w-none flex items-center select-none">
-        <img src="{{ $site['branding']['logo'] ?? null }}" class="h-12 md:h-16" />
-        <div class="flex-1"></div>
+        <img src="{{ $site['branding']['logo'] ?? null }}" class="h-12 md:h-16 mx-auto sm:mx-0" />
+        <div class="hidden sm:block flex-1"></div>
         <div class="hidden md:flex items-start">
             <div class="flex flex-col items-center p-2">
                 <span class="text-lg text-gray-800 font-light leading-none">We Can Assist You</span>
-                <a href="#" class="text-3xl font-bold text-blue-900 hover:underline leading-tight">(786) 988-9983</a>
-                <span class="text-sm text-gray-600 font-light leading-none flex items-center"><span class="inline-block flex-none rounded-full h-3 w-3 bg-green-400 pulse-green-200 mr-1"></span> Expert Agents Available Now</span>
+                <a href="tel:{{ $site['branding']['phone'] ?? null }}" class="text-3xl font-bold text-blue-900 hover:underline leading-tight">{{ $site['branding']['phone'] ?? 'Call Now' }}</a>
+                <span class="text-sm text-gray-600 font-light leading-none flex items-center">
+                    <span class="inline-block flex-none rounded-full h-3 w-3 bg-green-400 pulse-green-200 mr-1"></span> Expert Agents Available Now
+                </span>
             </div>
-            <img src="https://go.homesalesclub.com/seller/8/assets/images/agent.png" class="h-24 w-24" />
+            <img src="img/agent.png" class="h-24 w-24" />
         </div>
-        <a href="#" class="Quiz--button leading-none hidden md:hidden" style="background-color: #fff; border-color: #ccc; color: #000;"><span class="inline-block flex-none rounded-full h-3 w-3 bg-green-400 pulse-green-200 mr-2"></span> Agents Online</a>
+        <a href="#" class="py-2 px-4 text-center font-medium border border-gray-400 rounded-md focus:outline-none leading-none hidden sm:flex items-center justify-center md:hidden" style="background-color: #fff; border-color: #ccc; color: #000;">
+            <span class="inline-block flex-none rounded-full h-3 w-3 bg-green-400 pulse-green-200 mr-2"></span> Agents Online
+        </a>
     </div>
 </header>
 
@@ -57,14 +61,13 @@
 </main>
 
 <footer class="text-center bg-gray-100 border-t-2 border-solid border-gray-200 flex flex-col space-y-4 py-10">
-    <img src="img/logo.png" class="mx-auto h-8 md:h-12" />
-    <address class="flex flex-col text-gray-900 text-xs">
-        <span>3000 East main Street, suite 156<br />Columbus, OH 43209</span>
-        <a href="mailto:#" class="text-blue-400">info@compensationadvocate.com</a>
-        <a href="tel:#">+1 (888) 405-6035</a>
+    <img src="{{ $site['branding']['logo'] ?? null }}" class="mx-auto h-6 md:h-8" />
+    <address class="flex flex-col text-white text-xs">
+        <span>{{ $site['branding']['address'] ?? null }}</span>
+        <a href="mailto:{{ $site['branding']['email'] ?? null }}" class="text-blue-400">{{ $site['branding']['email'] ?? null }}</a>
+        <a href="tel:{{ $site['branding']['phone'] ?? null }}">{{ $site['branding']['phone'] ?? null }}</a>
     </address>
-
-    <small class="leading-none text-gray-700">© 2020 Copyright Compensation Advocate</small>
+    <small class="leading-none text-gray-400">© 2020 Copyright {{ $site["name"] }}</small>
 </footer>
 
 <x-alert />
