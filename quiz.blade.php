@@ -39,7 +39,12 @@
 
 <footer class="text-center flex flex-col space-y-4 mt-10 py-4">
     <img src="{{ $site['branding']['logo'] ?? null }}" class="mx-auto h-6 md:h-8" />
-    <address class="flex flex-col items-center text-white text-xs">
+    <ul class="inline-flex items-center justify-center mx-auto space-x-4">
+        <li><a href="/pages/contact">Contact</a></li>
+        <li><a href="/pages/privacy">Privacy Policy</a></li>
+        <li><a href="/pages/terms">Terms of Service</a></li>
+    </ul>
+    <address class="flex flex-col items-center text-xs">
         <span>{{ $site['branding']['address'] ?? null }}</span>
         <a href="mailto:#" class="text-blue-400">{{ $site['branding']['email'] ?? null }}</a>
         <a href="tel:#">{{ $site['branding']['phone'] ?? null }}</a>
