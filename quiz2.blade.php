@@ -63,9 +63,9 @@
 <footer class="text-center bg-gray-100 border-t-2 border-solid border-gray-200 flex flex-col space-y-4 py-10">
     <img src="{{ $site['branding']['logo'] ?? null }}" class="mx-auto h-6 md:h-8" />
     <ul class="inline-flex items-center justify-center mx-auto space-x-4">
-        <li><a href="/pages/contact">Contact</a></li>
-        <li><a href="/pages/privacy">Privacy Policy</a></li>
-        <li><a href="/pages/terms">Terms of Service</a></li>
+        <li><a href="/pages/contact" class="hover:text-brand1">Contact</a></li>
+        <li><a href="/pages/privacy" class="hover:text-brand1">Privacy Policy</a></li>
+        <li><a href="/pages/terms" class="hover:text-brand1">Terms of Service</a></li>
     </ul>
     <address class="flex flex-col items-center text-xs">
         <span>{{ $site['branding']['address'] ?? null }}</span>
