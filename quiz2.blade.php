@@ -62,7 +62,7 @@
 
 <footer class="text-center bg-gray-100 border-t-2 border-solid border-gray-200 flex flex-col space-y-4 py-10">
     <img src="{{ $site['branding']['logo'] ?? null }}" class="mx-auto h-6 md:h-8" />
-    <address class="flex flex-col text-white text-xs">
+    <address class="flex flex-col items-center text-white text-xs">
         <span>{{ $site['branding']['address'] ?? null }}</span>
         <a href="mailto:{{ $site['branding']['email'] ?? null }}" class="text-blue-400">{{ $site['branding']['email'] ?? null }}</a>
         <a href="tel:{{ $site['branding']['phone'] ?? null }}">{{ $site['branding']['phone'] ?? null }}</a>
