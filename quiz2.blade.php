@@ -24,14 +24,14 @@
             </div>
             <img src="img/agent.png" class="h-24 w-24" />
         </div>
-        <a href="#" class="py-2 px-4 text-center font-medium border border-gray-400 rounded-md focus:outline-none leading-none hidden sm:flex items-center justify-center md:hidden" style="background-color: #fff; border-color: #ccc; color: #000;">
+        <a href="tel:{{ $site['branding']['phone'] ?? null }}" class="py-2 px-4 text-center font-medium bg-white border text-black border-gray-400 rounded-md focus:outline-none leading-none hidden sm:flex items-center justify-center md:hidden">
             <span class="inline-block flex-none rounded-full h-3 w-3 bg-green-400 pulse-green-200 mr-2"></span> Agents Online
         </a>
     </div>
 </header>
 
 <main id="app">
-    <section class="bg-cover" style="background-image: url('https://go.homesalesclub.com/seller/8/assets/images/hero.jpg')">
+    <section class="bg-cover" style="background-image: url('img/hero.jpg')">
         <div class="container px-6 py-10 md:py-12 md:px-20">
             <h1 class="text-4xl leading-none font-bold text-center text-white text-shadow mb-10">Lock In Your Free All-Cash Offer Today</h1>
         </div>
