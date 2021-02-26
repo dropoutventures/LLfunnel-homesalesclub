@@ -5,7 +5,7 @@
     <x-header-scripts />
 </head>
 
-<body class="loading"
+<body class="loading" id="{{ $view_name }}"
       x-data="{ quiz: window.livewire.find(document.getElementById('Quiz').getAttribute('wire:id')) }"
       x-on:next-step.document="quiz = event.detail"
 >
@@ -18,11 +18,11 @@
 
 <main class="container bg-white rounded shadow-lg p-6 md:py-10 md:px-20" id="app">
     <div class="hidden md:flex items-center space-x-8 line-middle relative after:border-gray-200">
-        <template x-for="(_, step) in Array.from({ length: quiz.stepMax - 1 })">
+        <template hidden x-for="(_, step) in Array.from({ length: quiz.stepMax - 1 })">
             <span class="rounded-full border border-gray-200 border-solid px-5 py-2 select-none font-bold bg-white z-10" x-bind:class="{ 'bg-blue-500 shadow-outline-blue text-white': step + 1 == quiz.step }" x-text="step + 1"></span>
         </template>
     </div>
-    <template x-if="quiz.step <= 1">
+    <template hidden x-if="quiz.step <= 1">
         <div>
             @if(!empty($page['headline'] ?? false))
                 <h1 class="Quiz--heading">{!! $page['headline'] !!}</h1>

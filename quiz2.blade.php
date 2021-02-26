@@ -5,7 +5,7 @@
     <x-header-scripts />
 </head>
 
-<body class="loading"
+<body class="loading" id="{{ $view_name }}"
       x-data="{ quiz: window.livewire.find(document.getElementById('Quiz').getAttribute('wire:id')) }"
       x-on:next-step.document="quiz = event.detail"
 >
@@ -41,13 +41,13 @@
             <div class="absolute top-0 inset-x-0 transform -translate-y-1/2 select-none mx-auto bg-white rounded-full h-24 w-24 border-8 border-double border-transparent"
                  x-bind:style="'background-image: linear-gradient(#fff, #fff), conic-gradient(var(--brand2) ' + (((quiz.step - 1) / (quiz.stepMax - 1)) * 100).toFixed(0) + '%, #eee 0); background-origin: border-box; background-clip: content-box, border-box;'"
             >
-                <template x-if="quiz.step <= 1">
+                <template hidden x-if="quiz.step <= 1">
                     <div class="relative flex flex-col items-center justify-center w-full h-full">
                         <span class="uppercase text-xl">Start</span>
                         <i class="far fa-chevron-down absolute bottom-0 mb-2" style="animation: float 6s ease-in-out infinite;"></i>
                     </div>
                 </template>
-                <template x-if="quiz.step > 1">
+                <template hidden x-if="quiz.step > 1">
                     <div class="relative flex flex-col items-center justify-center w-full h-full">
                         <span class="uppercase text-xl" x-text="(((quiz.step - 1) / (quiz.stepMax - 1)) * 100).toFixed(0) + '%'">Start</span>
                     </div>
