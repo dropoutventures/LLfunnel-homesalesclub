@@ -39,7 +39,7 @@
     <section>
         <div class="container relative p-6 md:py-12 md:px-20">
             <div class="absolute top-0 inset-x-0 transform -translate-y-1/2 select-none mx-auto bg-white rounded-full h-24 w-24 border-8 border-double border-transparent"
-                 x-bind:style="'background-image: linear-gradient(#fff, #fff), conic-gradient(var(--brand2) ' + (((quiz.step - 1) / (quiz.stepMax - 1)) * 100).toFixed(0) + '%, #eee 0); background-origin: border-box; background-clip: content-box, border-box;'"
+                 x-bind:style="'background-image: linear-gradient(#fff, #fff), conic-gradient(rgb(var(--brand2)) ' + (((quiz.step - 1) / (quiz.stepMax - 1)) * 100).toFixed(0) + '%, #eee 0); background-origin: border-box; background-clip: content-box, border-box;'"
             >
                 <template hidden x-if="quiz.step <= 1">
                     <div class="relative flex flex-col items-center justify-center w-full h-full">
