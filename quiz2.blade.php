@@ -33,7 +33,10 @@
 <main id="app">
     <section class="bg-cover" style="background-image: url('img/hero.jpg')">
         <div class="container px-6 py-10 md:py-12 md:px-20">
-            <h1 class="text-4xl leading-none font-bold text-center text-white text-shadow mb-10">Lock In Your Free All-Cash Offer Today</h1>
+            <h1 class="text-4xl leading-none font-bold text-center text-white text-shadow mb-10">
+                Save BIG On A New Roof!
+                <small class="block mt-2 text-lg">Takes less than 30 seconds!</small>
+            </h1>
         </div>
     </section>
     <section>
