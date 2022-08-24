@@ -74,7 +74,7 @@
         <a href="mailto:{{ $site['branding']['email'] ?? null }}" class="text-blue-400">{{ $site['branding']['email'] ?? null }}</a>
         <a href="tel:{{ $site['branding']['phone'] ?? null }}">{{ $site['branding']['phone'] ?? null }}</a>
     </address>
-    <small class="leading-none text-gray-400">© 2020 Copyright {{ $site["name"] }}</small>
+    <small class="leading-none text-gray-400">© 2022 Copyright {{ $site["name"] }}</small>
 </footer>
 
 <x-alert />
