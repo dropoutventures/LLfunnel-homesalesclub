@@ -29,7 +29,7 @@
         </a>
     </div>
 </header>
-
+@dd($page)
 <main id="app">
     <section class="bg-cover" style="background-image: url('img/hero.jpg')">
         <div class="container px-6 py-10 md:py-12 md:px-20">
